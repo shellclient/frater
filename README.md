@@ -160,4 +160,4 @@ Este bot incluye algunos lenguajes humorísticos e informales en sus respuestas.
 Si encuentras problemas o tienes preguntas:
 - Abrir un issue en GitHub
 - Consultar la [documentación de Discord.py](https://discordpy.readthedocs.io/)
-- Revisar la [documentación de Pomice](https://github.com/cloudwithax/pomice)
+- Revisar la [documentación de Pomice](https://pomice.readthedocs.io/en/latest/)
