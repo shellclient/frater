@@ -45,7 +45,8 @@ Un bot (muy básico) de música para Discord construido con Python, que incluye 
 2. **Instalar dependencias**
    ```bash
    pip install pipenv
-   pipenv install
+   pipenv shell      # <--- Iniciar el entorno
+   pipenv install    # <--- Instalar dependencias
    ```
 
 3. **Configurar variables de entorno**
