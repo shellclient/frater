@@ -5,7 +5,7 @@
 ![Pomice](https://img.shields.io/badge/pomice-latest-green.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
-Un poderoso bot de música para Discord construido con Python, que incluye reproducción de música, comandos divertidos y utilidades para el servidor.
+Un bot (muy básico) de música para Discord construido con Python, que incluye reproducción de música, comandos divertidos y utilidades para el servidor.
 
 ## ✨ Características
 
