@@ -30,7 +30,7 @@ Un poderoso bot de música para Discord construido con Python, que incluye repro
 ## 🚀 Inicio Rápido
 
 ### Requisitos Previos
-- Python 3.13+
+- Python 3.12+
 - Token de Bot de Discord
 - Servidor Lavalink (para funcionalidad de música)
 
