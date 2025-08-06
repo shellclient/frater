@@ -5,53 +5,54 @@
 ![Pomice](https://img.shields.io/badge/pomice-latest-green.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
-A powerful Discord music bot built with Python, featuring music playback, fun commands, and server utilities.
+Un bot (muy básico) de música para Discord construido con Python, que incluye reproducción de música, comandos divertidos y utilidades para el servidor.
 
-## ✨ Features
+## ✨ Características
 
-### 🎶 Music Commands
-- **Play music** from YouTube, Spotify, and other sources
-- **Queue management** with playlist support
-- **Volume control** and audio effects
-- **Voice channel management** (join/leave)
-- **Pause/Resume** functionality
+### 🎶 Comandos de Música
+- **Reproducir música** desde YouTube, Spotify y otras fuentes
+- **Gestión de cola** con soporte para listas de reproducción
+- **Control de volumen** y efectos de audio
+- **Gestión de canales de voz** (unirse/salir)
+- **Funcionalidad de pausa/reanudar**
 
-### 🎭 Fun Commands  
-- **Message snipe** - Recover deleted messages
-- **Say command** - Make the bot say custom messages
-- **Interactive responses** with personality
+### 🎭 Comandos Divertidos  
+- **Snipe de mensajes** - Recuperar mensajes eliminados
+- **Comando say** - Hacer que el bot diga mensajes personalizados
+- **Respuestas interactivas** con personalidad
 
-### 🛠️ Utility Commands
-- **Message management** - Clear messages in bulk
-- **Channel nuke** - Completely reset channels
-- **Custom help system** - Organized command documentation
-- **Permission-based access** control
+### 🛠️ Comandos de Utilidad
+- **Gestión de mensajes** - Borrar mensajes en lotes
+- **Nuke de canal** - Reiniciar completamente canales
+- **Sistema de ayuda personalizado** - Documentación organizada de comandos
+- **Control de acceso** basado en permisos
 
-## 🚀 Quick Start
+## 🚀 Inicio Rápido
 
-### Prerequisites
-- Python 3.13+
-- Discord Bot Token
-- Lavalink Server (for music functionality)
+### Requisitos Previos
+- Python 3.12+
+- Token de Bot de Discord
+- Servidor Lavalink (para funcionalidad de música)
 
-### Installation
+### Instalación
 
-1. **Clone the repository**
+1. **Clonar el repositorio**
    ```bash
    git clone https://github.com/shellclient/frater.git
    cd frater
    ```
 
-2. **Install dependencies**
+2. **Instalar dependencias**
    ```bash
-   pip install pipenv
-   pipenv install
+   pip install pipenv   
+   pipenv shell         # <--- Iniciar el entorno. En caso de Windows a veces puede no funcionar, en ese caso usar: python -m pipenv shell
+   pipenv install       # <--- Instalar dependencias
    ```
 
-3. **Set up environment variables**
-   Create a `.env` file in the root directory:
+3. **Configurar variables de entorno**
+   Crear un archivo `.env` en el directorio raíz:
    ```env
-   TOKEN=your_discord_bot_token
+   TOKEN=tu_token_del_bot_de_discord
    PREFIX=!
    LAVALINK_HOST=localhost
    LAVALINK_PORT=2333
@@ -59,100 +60,104 @@ A powerful Discord music bot built with Python, featuring music playback, fun co
    LAVALINK_NAME=default-node
    ```
 
-4. **Run the bot**
+4. **Ejecutar el bot**
+   En modo desarrollo:
    ```bash
    pipenv run dev
    ```
 
-## 🎵 Lavalink Setup
+   Normal:
+   ```bash
+   python -m src.index 
+   ```
 
-For music functionality, you need a Lavalink server running:
+## 🎵 Configuración de Lavalink
 
-1. Download Lavalink from [here](https://github.com/freyacodes/Lavalink/releases)
-2. Configure `application.yml`
-3. Run Lavalink: `java -jar Lavalink.jar`
+Para la funcionalidad de música, necesitas un servidor Lavalink ejecutándose:
 
-## 📝 Commands
+1. Descargar Lavalink desde [aquí](https://github.com/freyacodes/Lavalink/releases)
+2. Configurar `application.yml`
+3. Ejecutar Lavalink: `java -jar Lavalink.jar`
 
-### Music
-| Command | Aliases | Description |
-|---------|---------|-------------|
-| `!play <song>` | `!p` | Play music from various sources |
-| `!join` | `!j` | Join your voice channel |
-| `!leave` | `!l` | Leave the voice channel |
-| `!pause` | - | Pause the current track |
-| `!resume` | `!r` | Resume playback |
-| `!volume <1-100>` | `!v` | Change playback volume |
+## 📝 Comandos
 
-### Fun
-| Command | Description |
+### Música
+| Comando | Alias | Descripción |
+|---------|-------|-------------|
+| `!play <canción>` | `!p` | Reproducir música de varias fuentes |
+| `!join` | `!j` | Unirse a tu canal de voz |
+| `!leave` | `!l` | Salir del canal de voz |
+| `!pause` | - | Pausar la pista actual |
+| `!resume` | `!r` | Reanudar reproducción |
+| `!volume <1-100>` | `!v` | Cambiar volumen de reproducción |
+
+### Diversión
+| Comando | Descripción |
 |---------|-------------|
-| `!snipe` | Recover the last deleted message |
-| `!say <message>` | Make the bot say something |
+| `!snipe` | Recuperar el último mensaje eliminado |
+| `!say <mensaje>` | Hacer que el bot diga algo |
 
-### Utilities
-| Command | Description |
+### Utilidades
+| Comando | Descripción |
 |---------|-------------|
-| `!clear <amount>` | Delete specified number of messages |
-| `!nuke` | Reset the entire channel |
-| `!help [category]` | Show available commands |
+| `!clear <cantidad>` | Eliminar número especificado de mensajes |
+| `!nuke` | Reiniciar todo el canal |
+| `!help [categoría]` | Mostrar comandos disponibles |
 
-## 🏗️ Project Structure
+## 🏗️ Estructura del Proyecto
 
 ```
 frater/
 ├── src/
 │   ├── Cogs/
-│   │   ├── Music.py    # Music functionality
-│   │   ├── Fun.py      # Entertainment commands
-│   │   └── Utils.py    # Utility commands
-│   └── index.py        # Main bot file
-├── Pipfile             # Dependencies
-├── .env               # Environment variables
-└── README.md          # You are here!
+│   │   ├── Music.py    # Funcionalidad de música
+│   │   ├── Fun.py      # Comandos de entretenimiento
+│   │   └── Utils.py    # Comandos de utilidad
+│   └── index.py        # Archivo principal del bot
+├── Pipfile             # Dependencias
+├── .env               # Variables de entorno
+└── README.md          # ¡Estás aquí!
 ```
 
-## 🔧 Development
+## 🔧 Desarrollo
 
-### Running in development mode
+### Ejecutar en modo desarrollo
 ```bash
 pipenv run dev
 ```
 
-This uses `nodemon` to automatically restart the bot when files change.
+Esto usa `nodemon` para reiniciar automáticamente el bot cuando los archivos cambien.
 
-### Adding new commands
-1. Create commands in the appropriate Cog file
-2. Use the `@commands.command()` decorator
-3. Add proper error handling and help text
+### Agregar nuevos comandos
+1. Crear comandos en el archivo Cog apropiado
+2. Usar el decorador `@commands.command()`
+3. Agregar manejo de errores adecuado y texto de ayuda
 
-## 🤝 Contributing
+## 🤝 Contribuir
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+1. Hacer fork del repositorio
+2. Crear una rama de característica (`git checkout -b feature/caracteristica-increible`)
+3. Confirmar tus cambios (`git commit -m 'Agregar característica increíble'`)
+4. Subir a la rama (`git push origin feature/caracteristica-increible`)
+5. Abrir una Pull Request
 
-## 📄 License
+## 📄 Licencia
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Este proyecto está licenciado bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) para detalles.
 
-## ⚠️ Disclaimer
+## ⚠️ Descargo de Responsabilidad
 
-This bot includes some humorous and informal language in its responses. It's designed for casual Discord servers and friend groups. Please review and modify the language to suit your community's standards.
+Este bot incluye algunos lenguajes humorísticos e informales en sus respuestas. Está diseñado para servidores casuales de Discord y grupos de amigos. Por favor, revisa y modifica el lenguaje para adaptarlo a los estándares de tu comunidad.
 
-## 🐛 Known Issues
+## 🐛 Problemas Conocidos
 
-- Some music sources may require additional configuration
-- Voice channel permissions need to be properly set
-- Lavalink connection required for music functionality
+- Algunas fuentes de música pueden requerir configuración adicional
+- Los permisos del canal de voz necesitan estar configurados apropiadamente
+- Se requiere conexión a Lavalink para la funcionalidad de música
 
-## 📞 Support
+## 📞 Soporte
 
-If you encounter any issues or have questions:
-- Open an issue on GitHub
-- Check the [Discord.py documentation](https://discordpy.readthedocs.io/)
-- Review [Pomice documentation](https://github.com/cloudwithax/pomice)
-
-
+Si encuentras problemas o tienes preguntas:
+- Abrir un issue en GitHub
+- Consultar la [documentación de Discord.py](https://discordpy.readthedocs.io/)
+- Revisar la [documentación de Pomice](https://pomice.readthedocs.io/en/latest/)
