@@ -45,8 +45,8 @@ class Fun(commands.Cog):
     @commands.command(name='say', description='hacer que el bot diga algo')
     @commands.has_permissions(manage_messages=True, moderate_members=True)
     async def say(self, ctx, *, args):
-        await ctx.send(args)
         await ctx.message.delete()
+        await ctx.send(args)
 
 async def setup(bot):
     await bot.add_cog(Fun(bot))
